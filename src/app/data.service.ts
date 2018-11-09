@@ -11,7 +11,7 @@ export class DataService {
   moviesArry:any = []
 
   constructor(private http: HttpClient, private router: Router) {
-    let url: string = 'omdbapi.com/?i=tt3896198&apikey=af359b6e';   
+    let url: string = 'www.omdbapi.com/?i=tt3896198&apikey=af359b6e';   
     this.http.get<any>(url).subscribe( data => { 
       this.moviesArry.push(
         {
