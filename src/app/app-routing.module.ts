@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main.component';
-import { NgbdCarouselBasic } from './header.component';
 import { ListComponent } from './list.component';
 import { modaledit } from './modaledit.component';
 import { modaldelete } from './modaldelete.component';

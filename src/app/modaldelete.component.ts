@@ -58,4 +58,3 @@ export class modaldelete implements AfterViewInit {
     ngAfterViewInit() {
     }
 }
-//// test
