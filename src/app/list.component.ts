@@ -8,45 +8,54 @@ import {DomSanitizer} from '@angular/platform-browser';
   selector: 'app-list',
   template: `
 <div class="container-fluid">
-<div class="row" *ngIf="posts.length; else nousers">
-<div class="col-md-4" *ngFor="let p of posts ; index as i">
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{p.Title | titlecase | noneenglish}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src="{{p.imge}}">
-  <mat-card-content>
-  <p><strong>Year: </strong> {{p.Year}}</p>  <p><strong>Runtime: </strong> {{p.Runtime}}</p> <p> <strong>Genre: </strong> {{p.Genre}}</p> <p>  <strong>Director: </strong> {{p.Director}} </p>
-  </mat-card-content>
-  <mat-card-actions>
-  <div class="row justify-content-center">
-  <button mat-mini-fab color="wihte" routerLink="/movie/{{i}}/edit">
-  <mat-icon svgIcon="edit"></mat-icon>
-</button>
-<button mat-mini-fab color="wihte" routerLink="/movie/{{i}}/delete">
-  <mat-icon svgIcon="delete"></mat-icon>
-</button>
-</div>
-  </mat-card-actions>
-</mat-card>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<div class="footer">
-<div class="footer-copyright text-center py-3">© 2018 Copyright: oshrit malach assignment 
-    </div></div>
-</div>
-</div>
+  <div class="row" *ngIf="posts.length; else nousers">
+    <div class="col-md-4" *ngFor="let p of posts ; index as i">
+      <mat-card class="example-card">
 
-<ng-template #nousers>
-<h1>There is no movies in the list, Add some:) 
-</h1>
-</ng-template>
+          <mat-card-header>
+            <mat-card-title>{{p.Title | titlecase | noneenglish}}</mat-card-title>
+          </mat-card-header>
 
+          <img mat-card-image src="{{p.imge}}">
+          
+          <mat-card-content>
+            <p><strong>Year:</strong>{{p.Year}}</p>
+            <p><strong>Runtime:</strong>{{p.Runtime}}</p> 
+            <p><strong>Genre:</strong>{{p.Genre}}</p> 
+            <p><strong>Director:</strong> {{p.Director}}</p>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <div class="row justify-content-center">
+              <button mat-mini-fab color="wihte" routerLink="/movie/{{i}}/edit">
+                <mat-icon svgIcon="edit"></mat-icon>
+              </button>
+
+              <button mat-mini-fab color="wihte" routerLink="/movie/{{i}}/delete">
+                <mat-icon svgIcon="delete"></mat-icon>
+              </button>
+            </div>
+          </mat-card-actions>
+
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="footer">
+        <div class="footer-copyright text-center py-3">
+          © 2018 Copyright: oshrit malach assignment 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #nousers>
+    <h1>There is no movies in the list, Add some:)</h1>
+  </ng-template>
 
 </div>
-
   `,
   styles: [`
     .container-fluid {
@@ -54,6 +63,7 @@ import {DomSanitizer} from '@angular/platform-browser';
     }
     .example-card {
       max-width: 500px;
+      height:100%;
     }
     .editB{
       width:10px;
