@@ -11,7 +11,7 @@ export class DataService {
   moviesArry:any = []
 
   constructor(private http: HttpClient, private router: Router) {
-    console.log('test')
+    console.log('test 1111')
     let url: string = '//omdbapi.com/?i=tt3896198&apikey=af359b6e';   
     this.http.get<any>(url).subscribe( data => { 
       console.log('got api data',data)
@@ -58,7 +58,7 @@ export class DataService {
       this.moviesArry.splice(index,1);
       // if(this.moviesArry.length == 1){
       //   this.moviesArry =[];
-      // }
+      // }////
     }
   }
   
